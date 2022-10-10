@@ -6,7 +6,7 @@
 <body>
     <%- include("partials/header.ejs") %> 
     <h1>Editando el Usuario <%=userToEdit.name%></h1>
-    <form method="POST" action="/users/register">
+    <form method="POST" action="/users/edit?_method=PUT">
 <label for="">Nombre</label>
 <input type="text" name="editar" value="<%= userToEdit.name %>">
 <input type="submit" value="Editar">
