@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const userController = require('../controllers/userController');
+let logDBMiddleware = require('../middlewares/logDBMiddleware');
+
 /* GET users listing. */
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -8,7 +10,7 @@ router.get('/', function(req, res, next) {
 });
 ///agregado por mi
 router.get('/register', userController.register);
-router.post('/register', userController.create);
+router.post('/register', logDBMiddleware, userController.create);
 router.get('/list', userController.list);
 router.get('/search', userController.search);
 router.get('/edit/:idUser', userController.edit);
