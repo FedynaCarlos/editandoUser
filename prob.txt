@@ -1,1 +1,1 @@
- en la pagina /users/list
+ en la pagina /users/delete/1?_method=DELETE
